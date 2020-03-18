@@ -1,0 +1,14 @@
+@import "montserrant.css";
+@import '~normalize.css';
+
+h1 {
+  color: chartreuse;
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+}
+
+.image {
+  width: 570px;
+  height: 428px;
+  background-image: url("../assets/5b_S52BEW3M.jpg");
+}

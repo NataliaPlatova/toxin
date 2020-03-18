@@ -11,9 +11,9 @@ const isProd = !isDev;
 const optimization = () => {
     const config = {
         splitChunks: {
-            chunk: 'all'
+            chunks: 'all'
         }
-    }
+    };
     if(isProd) {
         config.minimizer = [
             new OptimizeCssAssetsWebpackPlugin(),
@@ -21,16 +21,17 @@ const optimization = () => {
         ]
     }
     return config;
-}
+};
 
 module.exports = {
     context: path.resolve(__dirname, "src"),
     mode: "development",
     entry: "./index.js",
     output: {
-        filename: "[name].[contenthash].js",
+        filename: isProd ? '[name].[contenthash].js' : '[name].[hash].js',
         path: path.resolve(__dirname, 'dist')
     },
+    optimization: optimization(),
     devServer: {
         port: 4200,
         hot: isDev
@@ -59,6 +60,20 @@ module.exports = {
                             reloadAll: true
                         }
                 }, 'css-loader']
+            },
+            {
+                test: /\.s[ac]ss$/,
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            hmr: isDev,
+                            reloadAll: true
+                        }
+                    },
+                    'css-loader',
+                    'sass-loader'
+                ]
             },
             {
                 test: /\.(png|jpg|svg|gif)$/,
