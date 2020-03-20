@@ -1,5 +1,8 @@
 @import url(../css/montserrat.css);
 @import url(~normalize.css);
+body {
+  font-family: Montserrat; }
+
 h1 {
   color: chartreuse;
   text-align: center;
