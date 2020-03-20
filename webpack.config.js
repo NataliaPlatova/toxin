@@ -63,6 +63,14 @@ module.exports = {
                 collapsewhitespace: isProd
             }
         }),
+        new HTMLWebpackPlugin({
+            template: './static/pages/ui-kit.pug',
+            filename: 'static/' + filename('html'),
+            path: path.resolve(__dirname, 'dist'),
+            minify: {
+                collapsewhitespace: isProd
+            }
+        }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: 'css/' + filename('css'),

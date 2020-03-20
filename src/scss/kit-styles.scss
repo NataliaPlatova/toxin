@@ -1,0 +1,41 @@
+$darkShade100: #1F2041;
+$darkShade75: rgba(31, 32, 65, 0.75);
+$darkShade50: rgba(31, 32, 65, 0.5);
+$darkShade25: rgba(31, 32, 65, 0.25);
+$darkShade05: rgba(31, 32, 65, 0.05);
+$purple: #BC9CFF;
+$green: #6FCF97;
+
+.kit__color {
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+
+  &_dark-shade-100 {
+    background-color: $darkShade100;
+  }
+
+  &_dark-shade-75 {
+    background-color: $darkShade75;
+  }
+
+  &_dark-shade-50 {
+    background-color: $darkShade50;
+  }
+
+  &_dark-shade-25 {
+    background-color: $darkShade25;
+  }
+
+  &_dark-shade-05 {
+    background-color: $darkShade05;
+  }
+
+  &_purple {
+    background-color: $purple;
+  }
+
+  &_green {
+    background-color: $green;
+  }
+}
