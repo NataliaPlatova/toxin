@@ -23,12 +23,32 @@ const optimization = () => {
     return config;
 };
 
+const filename = ext => isDev ? `[name].${ext}` : `[name].[hash].${ext}`;
+const cssloaders = extra => {
+    const loaders = [
+        {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+                hmr: isDev,
+                reloadAll: true
+            }
+        },
+        'css-loader'
+    ];
+    if (extra) {
+        loaders.push(extra);
+    }
+    return loaders;
+}
+
 module.exports = {
     context: path.resolve(__dirname, "src"),
     mode: "development",
-    entry: "./index.js",
+    entry: {
+        main: "./index.js"
+    },
     output: {
-        filename: isProd ? '[name].[contenthash].js' : '[name].[hash].js',
+        filename: 'js/' + filename('js'),
         path: path.resolve(__dirname, 'dist')
     },
     optimization: optimization(),
@@ -38,42 +58,26 @@ module.exports = {
     },
     plugins: [
         new HTMLWebpackPlugin({
-            template: './index.html',
+            template: './index.pug',
             minify: {
                 collapsewhitespace: isProd
             }
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
-            filename: '[name].[contenthash].css'
+            filename: 'css/' + filename('css'),
+            path: path.resolve(__dirname, 'dist')
         })
     ],
     module: {
         rules: [
             {
                 test: /\.css$/,
-                use: [
-                    {
-                        loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            hmr: isDev,
-                            reloadAll: true
-                        }
-                }, 'css-loader']
+                use: cssloaders()
             },
             {
                 test: /\.s[ac]ss$/,
-                use: [
-                    {
-                        loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            hmr: isDev,
-                            reloadAll: true
-                        }
-                    },
-                    'css-loader',
-                    'sass-loader'
-                ]
+                use: cssloaders('sass-loader')
             },
             {
                 test: /\.(png|jpg|svg|gif)$/,
@@ -82,6 +86,10 @@ module.exports = {
             {
                 test: /\.(woff|ttf|svg)$/,
                 use: ['file-loader']
+            },
+            {
+                test: /\.pug$/,
+                use: ['pug-loader']
             }
         ]
     }
