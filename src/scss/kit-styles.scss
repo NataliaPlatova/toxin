@@ -8,6 +8,18 @@ $darkShade05: rgba(31, 32, 65, 0.05);
 $purple: #BC9CFF;
 $green: #6FCF97;
 
+.ui-kit__header {
+  width: 100%;
+  padding: 30px;
+}
+
+.ui-kit__logo {
+  width: 48px;
+  height: 48px;
+  background-image: url("../assets/img/logo.png");
+  background-size: cover;
+}
+
 .ui-kit {
   display: flex;
   flex-direction: row;
