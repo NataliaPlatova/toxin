@@ -1,16 +1,37 @@
 @import "../css/montserrat.css";
-@import "../css/quicksand.css";
+@import '../css/quicksand.css';
+@import "../scss/kit-styles";
 @import '~normalize.css';
-@import "kit-styles.scss";
 
 h1 {
-  color: $green;
-  text-align: center;
-  font-family: Montserrat, sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: $darkShade100;
 }
 
-.image {
-  width: 570px;
-  height: 428px;
-  background-image: url("../assets/img/5b_S52BEW3M.jpg");
+h2 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+  color: $darkShade100;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: $darkShade100;
+}
+
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: $darkShade75;
 }

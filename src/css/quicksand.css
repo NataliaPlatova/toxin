@@ -1,9 +1,9 @@
 @font-face {
     font-family: 'Quicksand';
-    src: local('Quicksand Bold'), local('Quicksand-Bold'),
-    url('../assets/fonts/Quicksand-Bold.ttf') format('truetype'),
-    url('../assets/fonts/Quicksand-Bold.woff') format('woff'),
-    url('../assets/fonts/Quicksand-Bold.svg') format('svg');
+    src:
+        url('../assets/fonts/Quicksand-Bold.ttf') format('truetype'),
+        url('../assets/fonts/Quicksand-Bold.woff') format('woff'),
+        url('../assets/fonts/Quicksand-Bold.svg') format('svg');
     font-weight: bold;
     font-style: normal;
 }
