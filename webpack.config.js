@@ -64,8 +64,8 @@ module.exports = {
             }
         }),
         new HTMLWebpackPlugin({
-            template: './static/pages/ui-kit.pug',
-            filename: 'static/' + filename('html'),
+            template: './static/ui-kit/colors&type.pug',
+            filename: 'static/ui-kit/' + filename('html'),
             path: path.resolve(__dirname, 'dist'),
             minify: {
                 collapsewhitespace: isProd
