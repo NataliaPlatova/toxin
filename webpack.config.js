@@ -90,14 +90,29 @@ module.exports = {
             },
 
             {
-                test: /\.(png|jpg|svg|gif)$/,
-                use: 'file-loader',
+                test: /\.(png|jpg|gif)$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: "[name].[ext]?[hash]",
+                        outputPath: "assets/img/",
+                        publicPath: "img/"
+                    }
+                }],
             },
 
             {
-                test: /\.(woff|woff2|ttf)$/,
-                use: ['file-loader'],
+                test: /\.(woff|woff2|ttf|svg)$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: "[name].[ext]?[hash]",
+                        outputPath: "assets/fonts/",
+                        publicPath: "fonts/"
+                    }
+                }],
             },
+
             {
                 test: /\.pug$/,
                 use: ['pug-loader']
