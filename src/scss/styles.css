@@ -75,6 +75,31 @@
     display: block;
     width: 37px; }
 
+label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #1F2041;
+  margin: 0 0 5px;
+  text-transform: uppercase;
+  display: block; }
+
+input {
+  max-width: 320px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 13px 15px;
+  color: rgba(31, 32, 65, 0.25);
+  display: block; }
+  input.hover, input:hover, input:focus {
+    border: 1px solid rgba(31, 32, 65, 0.5);
+    color: rgba(31, 32, 65, 0.75); }
+
+.form-elements__column {
+  min-width: 33.333%; }
+
 h1 {
   font-family: 'Quicksand', sans-serif;
   font-weight: bold;
@@ -97,7 +122,8 @@ h3 {
   font-size: 12px;
   line-height: 15px;
   color: #1F2041;
-  margin: 0; }
+  margin: 0;
+  text-transform: uppercase; }
 
 body {
   font-family: 'Montserrat', sans-serif;

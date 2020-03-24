@@ -72,6 +72,14 @@ module.exports = {
                 collapsewhitespace: isProd
             }
         }),
+        new HTMLWebpackPlugin({
+            template: './static/ui-kit/form-elements.pug',
+            filename: 'static/ui-kit/' + filename('html'),
+            path: path.resolve(__dirname, 'dist'),
+            minify: {
+                collapsewhitespace: isProd
+            }
+        }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: 'css/' + filename('css'),

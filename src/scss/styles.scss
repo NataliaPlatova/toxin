@@ -1,6 +1,7 @@
 @import "../css/montserrat.css";
 @import '../css/quicksand.css';
 @import "../scss/kit-styles";
+@import "../scss/form-elements";
 @import '~normalize.css';
 
 h1 {
@@ -28,6 +29,7 @@ h3 {
   line-height: 15px;
   color: $darkShade100;
   margin: 0;
+  text-transform: uppercase;
 }
 
 

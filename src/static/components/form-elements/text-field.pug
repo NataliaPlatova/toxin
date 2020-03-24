@@ -1,0 +1,6 @@
+mixin textField(label, type, placeholder, id, className)
+    label(for=label)=label
+    if(className)
+        input(type=type placeholder=placeholder name=label id=id class=className)
+    else
+        input(type=type placeholder=placeholder name=label id=id)

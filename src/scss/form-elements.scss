@@ -1,0 +1,34 @@
+label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: $darkShade100;
+  margin: 0 0 5px;
+  text-transform: uppercase;
+  display: block;
+}
+
+input {
+  max-width: 320px;
+  border: 1px solid $darkShade25;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 13px 15px;
+  color: $darkShade25;
+  display: block;
+
+  &.hover {
+    border: 1px solid $darkShade50;
+    color: $darkShade75;
+  }
+
+  &:hover,
+  &:focus {
+    @extend input.hover
+  }
+}
+
+.form-elements__column {
+  min-width: 33.333%;
+}
