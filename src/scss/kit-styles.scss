@@ -11,6 +11,7 @@ $green: #6FCF97;
 .ui-kit__header {
   width: 100%;
   padding: 30px;
+  box-sizing: border-box;
 }
 
 .ui-kit__logo {
@@ -20,22 +21,27 @@ $green: #6FCF97;
   background-size: cover;
 }
 
-.ui-kit {
+.container {
   display: flex;
+  max-width: 1160px;
   flex-direction: row;
-  justify-content: space-between;
-  padding: 0 150px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 30px;
+  box-sizing: content-box;
 }
 
 .colors-block {
   display: flex;
   flex-direction: column;
+  margin-right: auto;
 
   &__item {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     margin-right: 40px;
+    margin-bottom: 20px;
   }
 
   &__text {
@@ -89,10 +95,11 @@ $green: #6FCF97;
 .type-block {
   display: flex;
   flex-direction: column;
-  width: 400px;
+  width: 420px;
 
   &__item {
     display: flex;
+    margin-bottom: 50px;
   }
 
   &__text {

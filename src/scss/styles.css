@@ -4,7 +4,8 @@
 @import url(~normalize.css);
 .ui-kit__header {
   width: 100%;
-  padding: 30px; }
+  padding: 30px;
+  box-sizing: border-box; }
 
 .ui-kit__logo {
   width: 48px;
@@ -12,20 +13,25 @@
   background-image: url("../assets/img/logo.png");
   background-size: cover; }
 
-.ui-kit {
+.container {
   display: flex;
+  max-width: 1160px;
   flex-direction: row;
-  justify-content: space-between;
-  padding: 0 150px; }
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 30px;
+  box-sizing: content-box; }
 
 .colors-block {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  margin-right: auto; }
   .colors-block__item {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
-    margin-right: 40px; }
+    margin-right: 40px;
+    margin-bottom: 20px; }
   .colors-block__text {
     display: flex;
     flex-direction: column;
@@ -58,9 +64,10 @@
 .type-block {
   display: flex;
   flex-direction: column;
-  width: 400px; }
+  width: 420px; }
   .type-block__item {
-    display: flex; }
+    display: flex;
+    margin-bottom: 50px; }
   .type-block__text {
     font-weight: normal;
     color: rgba(31, 32, 65, 0.25);
@@ -72,21 +79,24 @@ h1 {
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
-  color: #1F2041; }
+  color: #1F2041;
+  margin: 0; }
 
 h2 {
   font-family: 'Quicksand', sans-serif;
   font-weight: bold;
   font-size: 19px;
   line-height: 24px;
-  color: #1F2041; }
+  color: #1F2041;
+  margin: 0; }
 
 h3 {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
-  color: #1F2041; }
+  color: #1F2041;
+  margin: 0; }
 
 body {
   font-family: 'Montserrat', sans-serif;
