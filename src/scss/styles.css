@@ -100,6 +100,46 @@ input {
 .form-elements__column {
   min-width: 33.333%; }
 
+select {
+  padding: 12px 15px 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  -webkit-appearance: none;
+  -moz-appearance: none; }
+
+.dropdown:after {
+  content: "";
+  width: 44px;
+  height: 44px;
+  background: url("../assets/img/expand_more.png");
+  background-size: cover; }
+.dropdown__option {
+  display: flex;
+  justify-content: space-between;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1F2041; }
+.dropdown__counter {
+  display: flex; }
+.dropdown__button {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(31, 32, 65, 0.05);
+  font-size: 18px;
+  line-height: 22px;
+  color: rgba(31, 32, 65, 0.05); }
+
 h1 {
   font-family: 'Quicksand', sans-serif;
   font-weight: bold;

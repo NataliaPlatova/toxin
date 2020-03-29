@@ -1,4 +1,6 @@
 extends ../layout/ui-kit.pug
+block variables
+    -var selectorOptions = ['option1', 'option2', 'option3'];
 
 block content
     .form-elements__column
@@ -6,4 +8,5 @@ block content
         +textField('text field', text, 'Email', 'text field')
         +textField('text field', text, 'This is pretty awesome', 'text', 'hover')
 
-
+        include ../components/form-elements/dropdown/dropdown
+        +dropdown()
