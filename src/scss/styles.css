@@ -1,6 +1,7 @@
 @import url(../css/montserrat.css);
 @import url(../css/quicksand.css);
 @import url(../css/quicksand.css);
+@import url(~item-quantity-dropdown/lib/item-quantity-dropdown.min.css);
 @import url(~normalize.css);
 .ui-kit__header {
   width: 100%;

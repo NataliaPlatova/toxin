@@ -1,9 +1,12 @@
-import * as $ from  'jquery';
+import * as $ from  'jquery/src/jquery';
 import './css/styles.css';
 import './scss/styles.scss';
-import 'item-quantity-dropdown';
-import 'item-quantity-dropdown/lib/item-quantity-dropdown.css';
+require('item-quantity-dropdown/lib/item-quantity-dropdown.min.js');
 
-console.log('Hello world!');
+//console.log('Hello world!');
 
-$('.jq').html('la-la-la');
+//$('.jq').html('la-la-la');
+
+$(document).ready(function() {
+    $(".iqdropdown").iqDropdown();
+})
