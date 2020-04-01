@@ -65,16 +65,16 @@ module.exports = {
             }
         }),
         new HTMLWebpackPlugin({
-            template: './static/ui-kit/colors&type.pug',
-            filename: 'static/ui-kit/' + filename('html'),
+            template: './pages/colors&type/colors&type.pug',
+            filename: 'static/pages/colors&type/' + filename('html'),
             path: path.resolve(__dirname, 'dist'),
             minify: {
                 collapsewhitespace: isProd
             }
         }),
         new HTMLWebpackPlugin({
-            template: './static/ui-kit/form-elements.pug',
-            filename: 'static/ui-kit/' + filename('html'),
+            template: './pages/form-elements/form-elements.pug',
+            filename: 'static/pages/form-elements/' + filename('html'),
             path: path.resolve(__dirname, 'dist'),
             minify: {
                 collapsewhitespace: isProd

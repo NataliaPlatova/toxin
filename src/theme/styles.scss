@@ -1,0 +1,52 @@
+@import "../css/montserrat.css";
+@import '../css/quicksand.css';
+@import "../layout/ui-kit/ui-kit";
+@import "../pages/form-elements/form-elements";
+@import '~normalize.css';
+
+@import '../css/quicksand.css';
+
+$darkShade100: #1F2041;
+$darkShade75: rgba(31, 32, 65, 0.75);
+$darkShade50: rgba(31, 32, 65, 0.5);
+$darkShade25: rgba(31, 32, 65, 0.25);
+$darkShade05: rgba(31, 32, 65, 0.05);
+$purple: #BC9CFF;
+$green: #6FCF97;
+
+h1 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: $darkShade100;
+  margin: 0;
+}
+
+h2 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+  color: $darkShade100;
+  margin: 0;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: $darkShade100;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: $darkShade75;
+}

@@ -1,6 +1,5 @@
 import * as $ from  'jquery/src/jquery';
-import './css/styles.css';
-import './scss/styles.scss';
+import './theme/styles.scss';
 require('item-quantity-dropdown/lib/item-quantity-dropdown.min.js');
 
 //console.log('Hello world!');

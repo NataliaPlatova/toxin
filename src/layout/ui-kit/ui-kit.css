@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  max-width: 1160px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 30px;
+  box-sizing: content-box; }
+
+/*# sourceMappingURL=ui-kit.css.map */
