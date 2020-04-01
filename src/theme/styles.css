@@ -1,6 +1,5 @@
 @import url(../css/montserrat.css);
 @import url(../css/quicksand.css);
-@import url(~item-quantity-dropdown/lib/item-quantity-dropdown.min.css);
 @import url(~normalize.css);
 @import url(../css/quicksand.css);
 .container {
@@ -11,37 +10,6 @@
   margin: 0 auto;
   padding: 30px;
   box-sizing: content-box; }
-
-.container {
-  display: flex;
-  max-width: 1160px;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  padding: 30px;
-  box-sizing: content-box; }
-
-label {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  color: #1F2041;
-  margin: 0 0 5px;
-  text-transform: uppercase;
-  display: block; }
-
-input {
-  max-width: 320px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  box-sizing: border-box;
-  border-radius: 4px;
-  padding: 13px 15px;
-  color: rgba(31, 32, 65, 0.25);
-  display: block; }
-  input.hover, input:hover, input:focus {
-    border: 1px solid rgba(31, 32, 65, 0.5);
-    color: rgba(31, 32, 65, 0.75); }
 
 .form-elements__column {
   min-width: 33.333%; }
