@@ -1,0 +1,8 @@
+mixin radio-buttons(optionsList, optionsName)
+  - var i = 0;
+  div(class='radio-buttons')
+      for option in optionsList
+          input(type='radio' id=i name=optionsName value=option)
+          label(for=i)=option
+          - i = i+1
+
