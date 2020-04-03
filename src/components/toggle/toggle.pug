@@ -1,0 +1,7 @@
+mixin toggle(presetName, id)
+  div(class='toggle')
+    label
+      input(type='checkbox' id=id)
+      span(class='toggle__switch')
+      span(class='toggle__label')=presetName
+

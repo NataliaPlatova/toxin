@@ -98,15 +98,16 @@ module.exports = {
             },
 
             {
-                test: /\.(png|jpg|gif)$/,
+                test: /\.(png|jp(e*)g)$/,
                 use: [{
-                    loader: 'file-loader',
+                    loader: 'url-loader',
                     options: {
+                        limit: 8000,
                         name: "[name].[ext]?[hash]",
-                        outputPath: "assets/img/",
-                        publicPath: "../../assets/img/"
+                        outputPath: "assets/fonts/",
+                        publicPath: "fonts/"
                     }
-                }],
+                }]
             },
 
             {
