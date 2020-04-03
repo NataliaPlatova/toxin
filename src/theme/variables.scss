@@ -7,3 +7,8 @@ $purple: #BC9CFF;
 $green: #6FCF97;
 $transparent: rgba(0, 0, 0, 0);
 
+@mixin clear-fix($height) {
+  min-height: $height;
+  height: 100%;
+  width: 100%;
+}

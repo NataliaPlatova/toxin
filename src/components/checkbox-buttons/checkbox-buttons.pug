@@ -1,8 +1,8 @@
-mixin checkboxButtons()
+mixin checkboxButtons(optionsList)
   fieldset(class='checkbox')
     legend='checkbox'
-    div(class='check')
-    label
-      input(type='checkbox' id='1' name='option')
-      span(class='checkbox__input')
-      span(class='checkbox__label')='option'
+    for option in optionsList
+      label
+        input(type='checkbox' id='1' name=option)
+        span(class='checkbox__input')
+        span(class='checkbox__label')=option

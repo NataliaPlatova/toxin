@@ -1,5 +1,7 @@
 .checkbox {
-  border: none; }
+  border: none;
+  display: flex;
+  flex-direction: column; }
   .checkbox > legend {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
@@ -10,7 +12,10 @@
     color: #1F2041; }
   .checkbox > label {
     position: relative;
-    display: inline-block; }
+    display: block;
+    margin-bottom: 10px;
+    padding-left: 30px;
+    box-sizing: border-box; }
     .checkbox > label > input[type='checkbox'] {
       opacity: 0;
       width: 0;
@@ -43,8 +48,6 @@
       left: 50%;
       transform: translate(-50%, -50%); }
   .checkbox__label {
-    position: absolute;
-    left: 30px;
     display: inline-block;
     font-family: 'Montserrat', sans-serif;
     text-transform: none;

@@ -1,6 +1,8 @@
 .toggle > label {
-  display: inline-block;
-  position: relative; }
+  display: block;
+  position: relative;
+  padding-left: 50px;
+  box-sizing: border-box; }
   .toggle > label > [type='checkbox'] {
     opacity: 0;
     width: 0;
@@ -22,8 +24,7 @@
   -webkit-transition: .4s;
   transition: .4s; }
 .toggle__label {
-  position: absolute;
-  left: 50px;
+  display: inline-block;
   font-family: 'Montserrat', sans-serif;
   text-transform: none;
   font-style: normal;
@@ -51,5 +52,9 @@ input:checked + .toggle__switch:before {
   -ms-transform: translateX(18px);
   transform: translateX(18px);
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
+.toggle__clear-fix {
+  min-height: 20px;
+  height: 100%;
+  width: 100%; }
 
 /*# sourceMappingURL=toggle.css.map */

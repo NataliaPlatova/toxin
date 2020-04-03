@@ -2,8 +2,10 @@
 
 .toggle {
   &>label {
-    display: inline-block;
+    display: block;
     position: relative;
+    padding-left: 50px;
+    box-sizing: border-box;
     &>[type='checkbox'] {
       opacity: 0;
       width: 0;
@@ -28,8 +30,7 @@
     transition: .4s;
   }
   &__label {
-    position: absolute;
-    left: 50px;
+    display: inline-block;
     font-family: 'Montserrat', sans-serif;
     text-transform: none;
     font-style: normal;
@@ -64,5 +65,8 @@
     -ms-transform: translateX(18px);
     transform: translateX(18px);
     background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
+  }
+  &__clear-fix {
+    @include clear-fix(20px);
   }
 }

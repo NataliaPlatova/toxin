@@ -2,6 +2,8 @@
 
 .checkbox {
   border: none;
+  display: flex;
+  flex-direction: column;
   &>legend {
     font-family:'Montserrat', sans-serif;
     font-style: normal;
@@ -13,7 +15,10 @@
   }
   &>label {
     position: relative;
-    display: inline-block;
+    display: block;
+    margin-bottom: 10px;
+    padding-left: 30px;
+    box-sizing: border-box;
     &>input[type='checkbox'] {
       opacity: 0;
       width: 0;
@@ -50,8 +55,6 @@
     }
   }
   &__label {
-    position: absolute;
-    left: 30px;
     display: inline-block;
     font-family: 'Montserrat', sans-serif;
     text-transform: none;
