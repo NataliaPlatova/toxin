@@ -5,6 +5,25 @@
   border: 1px solid $darkShade25;
   min-width: 40px;
   height: 20px;
+  padding: 0;
+  border-radius: 10px;
+  vertical-align: middle;
+  text-align: start;
+  &__icon {
+    font-size: 10px;
+    line-height: 9px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: baseline;
+    width: 20px;
+    height: 20px;
+    color: $darkShade25;
+    &:after {
+      content: 'favorite_border';
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
   &>span {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
@@ -12,25 +31,25 @@
     font-size: 10px;
     line-height: 12px;
     color: $darkShade25;
-    &:before {
-      content: '';
-      background-image: url("./img/heart.png");
-      width: 10px;
-      height: 8px;
-      background-size: cover;
-    }
+    display: inline-block;
+    vertical-align: baseline;
   }
   &_pressed {
     border-color: $purple;
+    &>.like-button__icon {
+      color: $purple;
+      &:after {
+        content: 'favorite';
+      }
+    }
     &>span {
       color: $purple;
-      &:before {
-        background-image: url("./img/heart-pressed.png");
-      }
     }
   }
   &:hover,
-  &:disabled {
+  &:disabled,
+  &:focus {
     @extend .like-button_pressed;
+    outline: none;
   }
 }

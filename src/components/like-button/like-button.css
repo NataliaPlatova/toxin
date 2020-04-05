@@ -2,25 +2,42 @@
   background-color: transparent;
   border: 1px solid rgba(31, 32, 65, 0.25);
   min-width: 40px;
-  height: 20px; }
+  height: 20px;
+  padding: 0;
+  border-radius: 10px;
+  vertical-align: middle;
+  text-align: start; }
+  .like-button__icon {
+    font-size: 10px;
+    line-height: 9px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: baseline;
+    width: 20px;
+    height: 20px;
+    color: rgba(31, 32, 65, 0.25); }
+    .like-button__icon:after {
+      content: 'favorite_border';
+      display: inline-block;
+      vertical-align: middle; }
   .like-button > span {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 10px;
     line-height: 12px;
-    color: rgba(31, 32, 65, 0.25); }
-    .like-button > span:before {
-      content: '';
-      background-image: url("./img/heart.png");
-      width: 10px;
-      height: 8px;
-      background-size: cover; }
-  .like-button_pressed, .like-button:hover, .like-button:disabled {
+    color: rgba(31, 32, 65, 0.25);
+    display: inline-block;
+    vertical-align: baseline; }
+  .like-button_pressed, .like-button:hover, .like-button:disabled, .like-button:focus {
     border-color: #BC9CFF; }
-    .like-button_pressed > span, .like-button:hover > span, .like-button:disabled > span {
+    .like-button_pressed > .like-button__icon, .like-button:hover > .like-button__icon, .like-button:disabled > .like-button__icon, .like-button:focus > .like-button__icon {
       color: #BC9CFF; }
-      .like-button_pressed > span:before, .like-button:hover > span:before, .like-button:disabled > span:before {
-        background-image: url("./img/heart-pressed.png"); }
+      .like-button_pressed > .like-button__icon:after, .like-button:hover > .like-button__icon:after, .like-button:disabled > .like-button__icon:after, .like-button:focus > .like-button__icon:after {
+        content: 'favorite'; }
+    .like-button_pressed > span, .like-button:hover > span, .like-button:disabled > span, .like-button:focus > span {
+      color: #BC9CFF; }
+  .like-button:hover, .like-button:disabled, .like-button:focus {
+    outline: none; }
 
 /*# sourceMappingURL=like-button.css.map */
