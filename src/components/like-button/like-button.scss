@@ -1,0 +1,36 @@
+@import "../../theme/variables";
+
+.like-button {
+  background-color: $transparent;
+  border: 1px solid $darkShade25;
+  min-width: 40px;
+  height: 20px;
+  &>span {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    color: $darkShade25;
+    &:before {
+      content: '';
+      background-image: url("./img/heart.png");
+      width: 10px;
+      height: 8px;
+      background-size: cover;
+    }
+  }
+  &_pressed {
+    border-color: $purple;
+    &>span {
+      color: $purple;
+      &:before {
+        background-image: url("./img/heart-pressed.png");
+      }
+    }
+  }
+  &:hover,
+  &:disabled {
+    @extend .like-button_pressed;
+  }
+}

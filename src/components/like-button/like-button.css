@@ -1,0 +1,26 @@
+.like-button {
+  background-color: transparent;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  min-width: 40px;
+  height: 20px; }
+  .like-button > span {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    color: rgba(31, 32, 65, 0.25); }
+    .like-button > span:before {
+      content: '';
+      background-image: url("./img/heart.png");
+      width: 10px;
+      height: 8px;
+      background-size: cover; }
+  .like-button_pressed, .like-button:hover, .like-button:disabled {
+    border-color: #BC9CFF; }
+    .like-button_pressed > span, .like-button:hover > span, .like-button:disabled > span {
+      color: #BC9CFF; }
+      .like-button_pressed > span:before, .like-button:hover > span:before, .like-button:disabled > span:before {
+        background-image: url("./img/heart-pressed.png"); }
+
+/*# sourceMappingURL=like-button.css.map */

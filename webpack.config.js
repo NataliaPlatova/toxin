@@ -66,7 +66,7 @@ module.exports = {
         }),
         new HTMLWebpackPlugin({
             template: './pages/colors&type/colors&type.pug',
-            filename: 'static/colors&type/' + filename('html'),
+            filename: 'static/' + 'colors&type.[hash].html',
             path: path.resolve(__dirname, 'dist'),
             minify: {
                 collapsewhitespace: isProd
@@ -74,7 +74,7 @@ module.exports = {
         }),
         new HTMLWebpackPlugin({
             template: './pages/form-elements/form-elements.pug',
-            filename: 'static/form-elements/' + filename('html'),
+            filename: 'static/' + 'forms-elements.[hash].html',
             path: path.resolve(__dirname, 'dist'),
             minify: {
                 collapsewhitespace: isProd
@@ -98,16 +98,15 @@ module.exports = {
             },
 
             {
-                test: /\.(png|jp(e*)g)$/,
+                test: /\.(png|jpg|gif)$/,
                 use: [{
-                    loader: 'url-loader',
+                    loader: 'file-loader',
                     options: {
-                        limit: 8000,
                         name: "[name].[ext]?[hash]",
-                        outputPath: "assets/fonts/",
-                        publicPath: "fonts/"
+                        outputPath: "assets/img/",
+                        publicPath: "../assets/img/"
                     }
-                }]
+                }],
             },
 
             {
@@ -117,7 +116,7 @@ module.exports = {
                     options: {
                         name: "[name].[ext]?[hash]",
                         outputPath: "assets/fonts/",
-                        publicPath: "fonts/"
+                        publicPath: "../assets/fonts/"
                     }
                 }],
             },
