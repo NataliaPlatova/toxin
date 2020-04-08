@@ -1,0 +1,30 @@
+@import "../../theme/variables";
+@import '~ion-rangeslider/css/ion.rangeSlider.min.css';
+
+.irs--flat .irs-line {
+  top: 25px;
+  height: 6px;
+  background-color: #FFFFFF;
+  border: 1px solid $darkShade25;
+  border-radius: 3px;
+}
+.irs--flat .irs-bar {
+  top: 26px;
+  height: 6px;
+  background: linear-gradient(180deg, $green 0%, #66D2EA 100%);
+}
+.irs--flat .irs-handle > i:first-child {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+  background: linear-gradient(180deg, $green 0%, #66D2EA 100%);
+}
+.irs--flat .irs-handle.state_hover > i:first-child,
+.irs--flat .irs-handle:hover > i:first-child {
+  background: linear-gradient(180deg, $green 0%, #66D2EA 100%);
+}
+.irs--flat .irs-min,
+.irs--flat .irs-max {
+  display: none;
+}
