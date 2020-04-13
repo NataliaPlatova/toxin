@@ -1,10 +1,6 @@
 import * as $ from  'jquery/src/jquery';
 import './theme/styles.scss';
 
-//console.log('Hello world!');
-
-//$('.jq').html('la-la-la');
-
 function requireAll(requireContext) {
     return requireContext.keys().map(requireContext);
 }

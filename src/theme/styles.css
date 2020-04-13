@@ -70,4 +70,9 @@ body {
   /* Support for IE. */
   font-feature-settings: 'liga'; }
 
+button {
+  box-shadow: none; }
+  button:hover {
+    cursor: pointer; }
+
 /*# sourceMappingURL=styles.css.map */

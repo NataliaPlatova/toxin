@@ -1,0 +1,82 @@
+@import "../../theme/variables";
+
+%button {
+  padding: 2px;
+  box-sizing: border-box;
+  background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
+  border-radius: 22px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  display: inline-block;
+  border: none;
+  &>span {
+    display: inline-block;
+    padding: 14px 20px 15px;
+    border-radius: 22px;
+  }
+  &_disabled {
+    opacity: 0.5;
+  }
+}
+.main-button {
+  @extend %button;
+  color: #FFFFFF;
+  &:disabled {
+    @extend %button_disabled;
+  }
+}
+.secondary-button {
+  @extend %button;
+  background-color: #FFFFFF;
+  color: $purple;
+  &:disabled {
+    @extend %button_disabled;
+  }
+  &>span {
+    background-color: #FFFFFF;
+  }
+}
+.text-link {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  display: inline-block;
+  background-color: $transparent;
+  color: $purple;
+  border: none;
+  &:disabled {
+    color: $darkShade50;
+  }
+}
+.big-button {
+  @extend %button;
+  position: relative;
+  color: #FFFFFF;
+  text-align: center;
+  min-width: 320px;
+  vertical-align: middle;
+  &__icon {
+    position: absolute;
+    right: 0;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: baseline;
+    width: 44px;
+    height: 44px;
+    color: #FFFFFF;
+    &:after {
+      content: 'arrow_forward';
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}

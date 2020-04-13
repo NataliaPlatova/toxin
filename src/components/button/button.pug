@@ -1,0 +1,10 @@
+mixin button(isButton, text)
+  -var classList = attributes.class
+  if(isButton)
+    button&attributes(attributes)
+      span=text
+      if(classList.includes('big-button'))
+        i(class='material-icons big-button__icon')
+  else
+    a(href='#')&attributes(attributes)
+      span=text
