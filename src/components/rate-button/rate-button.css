@@ -1,0 +1,13 @@
+.rate-form > input {
+  position: absolute;
+  opacity: 0; }
+
+.rate-button__star {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #BC9CFF; }
+  .rate-button__star_achieved {
+    background-color: #BC9CFF; }
+
+/*# sourceMappingURL=rate-button.css.map */

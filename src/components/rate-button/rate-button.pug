@@ -1,0 +1,12 @@
+mixin rate-button(rating)
+  - var i = 1;
+  form(class='rate-form')
+    input(type='submit')
+    div(class='rate-button')
+      for i in [1, 2, 3, 4, 5]
+        if i<=rating
+          div(class='rate-button__star rate-button__star_achieved')
+        else
+          div(class='rate-button__star')
+
+        - i = i+1;

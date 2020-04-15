@@ -1,0 +1,19 @@
+@import "../../theme/variables";
+
+.rate-form {
+  &>input {
+    position: absolute;
+    opacity: 0;
+  }
+}
+.rate-button {
+  &__star {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $purple;
+    &_achieved {
+      background-color: $purple;
+    }
+  }
+}
