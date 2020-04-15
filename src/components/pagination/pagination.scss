@@ -1,0 +1,70 @@
+@import "../../theme/variables";
+
+.pagination {
+  &__item {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 3px;
+    box-sizing: border-box;
+    & > a {
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 15px;
+      text-align: center;
+      color: $darkShade50;
+      text-decoration: none;
+      display: inline-block;
+      width: 40px;
+      vertical-align: bottom;
+    }
+
+    &_current {
+      background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
+      border-radius: 22px;
+
+      & > a {
+        color: #FFFFFF;
+      }
+    }
+
+    &_last-seen {
+      width: 80px;
+      &:after {
+        display: inline-block;
+        width: 40px;
+        content: '...';
+        text-align: center;
+        vertical-align: bottom;
+      }
+    }
+    &_invisible {
+      display: none;
+    }
+  }
+  &__next-button {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(180deg, $green 0%, #66D2EA 100%);
+    border-radius: 22px;
+    vertical-align: middle;
+    text-align: center;
+    padding: 5px 0;
+    box-sizing: border-box;
+    &-icon {
+      font-size: 24px;
+      line-height: 20px;
+      text-align: center;
+      color: #FFFFFF;
+      vertical-align: bottom;
+      display: inline-block;
+    }
+  }
+}
+
+

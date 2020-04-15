@@ -1,6 +1,7 @@
 extends ../../layout/ui-kit/ui-kit.pug
 block variables
     -var selectorOptions = ['option1', 'option2', 'option3'];
+    -var pageLinks = ['mbvnb', 'ydddddd', 'uuuuuuuuuu', 'uuuuuussfsfs', 'gggggggggg', 'hhhhhhhhh', 'taagxhxgcx', 'gsfs'];
 
 block content
     .form-elements__column
@@ -30,3 +31,6 @@ block content
         +button('false', 'Click me')(class='text-link')
         +button('false', 'Click me')(disabled='true' class='text-link')
         +button('true', 'Click me')(type='button' class='big-button')
+
+        include ../../components/pagination/pagination
+        +pagination(pageLinks)

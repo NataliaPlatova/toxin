@@ -1,0 +1,54 @@
+.pagination__item {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 3px;
+  box-sizing: border-box; }
+  .pagination__item > a {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: rgba(31, 32, 65, 0.5);
+    text-decoration: none;
+    display: inline-block;
+    width: 40px;
+    vertical-align: bottom; }
+  .pagination__item_current {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 22px; }
+    .pagination__item_current > a {
+      color: #FFFFFF; }
+  .pagination__item_last-seen {
+    width: 80px; }
+    .pagination__item_last-seen:after {
+      display: inline-block;
+      width: 40px;
+      content: '...';
+      text-align: center;
+      vertical-align: bottom; }
+  .pagination__item_invisible {
+    display: none; }
+.pagination__next-button {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border-radius: 22px;
+  vertical-align: middle;
+  text-align: center;
+  padding: 5px 0;
+  box-sizing: border-box; }
+  .pagination__next-button-icon {
+    font-size: 24px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    vertical-align: bottom;
+    display: inline-block; }
+
+/*# sourceMappingURL=pagination.css.map */

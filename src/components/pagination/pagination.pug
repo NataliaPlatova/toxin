@@ -1,0 +1,30 @@
+- var i = 1;
+
+mixin pagination(pageLinks)
+  ul(class='pagination')&attributes(attributes)
+    for pageLink in pageLinks
+      if (pageLinks.length<=5 & i===1)
+        li(class='pagination__item pagination__item_current')
+          a(class='pagination__link' href=pageLink)=i
+      else if (pageLinks.length<=5)
+        li(class='pagination__item')
+          a(class='pagination__link' href=pageLink)=i
+      else
+        if(i<3 & i===1)
+          li(class='pagination__item pagination__item_current pagination__item_visible')
+            a(class='pagination__link' href=pageLink)=i
+        else if (i<3)
+          li(class='pagination__item pagination__item_visible')
+            a(class='pagination__link' href=pageLink)=i
+        else if (i===3)
+          li(class='pagination__item pagination__item_last-seen pagination__item_visible')
+            a(class='pagination__link' href=pageLink)=i
+        else if(i!==(pageLinks.length))
+          li(class='pagination__item pagination__item_invisible')
+            a(class='pagination__link' href=pageLink)=i
+        else if(i===(pageLinks.length))
+          li(class='pagination__item')
+            a(class='pagination__link' href=pageLink)=i
+      - i=i+1;
+    a(href='#' class='pagination__next-button')
+      i(class='material-icons pagination__next-button-icon') arrow_forward
