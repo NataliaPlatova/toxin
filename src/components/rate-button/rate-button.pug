@@ -5,6 +5,8 @@ mixin rate-button(rating)
       for i in [1, 2, 3, 4, 5]
         if i<=rating
           div(class='rate-button__star rate-button__star_achieved')
+            i(class='material-icons')
         else
           div(class='rate-button__star')
+            i(class='material-icons')
         - i = i+1;

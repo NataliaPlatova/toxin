@@ -4,10 +4,16 @@
 
 .rate-button__star {
   display: inline-block;
-  width: 20px;
-  height: 20px;
-  border: 1px solid #BC9CFF; }
-  .rate-button__star_achieved {
-    background-color: #BC9CFF; }
+  width: 24px;
+  height: 24px;
+  text-align: center; }
+  .rate-button__star > i {
+    font-size: 24px;
+    line-height: 20px; }
+    .rate-button__star > i:after {
+      content: 'star_border';
+      color: #BC9CFF; }
+  .rate-button__star_achieved > i:after {
+    content: 'star'; }
 
 /*# sourceMappingURL=rate-button.css.map */

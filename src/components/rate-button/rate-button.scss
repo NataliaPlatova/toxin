@@ -9,11 +9,21 @@
 .rate-button {
   &__star {
     display: inline-block;
-    width: 20px;
-    height: 20px;
-    border: 1px solid $purple;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    &>i {
+      font-size: 24px;
+      line-height: 20px;
+      &:after {
+        content: 'star_border';
+        color: $purple;
+      }
+    }
     &_achieved {
-      background-color: $purple;
+      &>i:after {
+        content: 'star';
+      }
     }
   }
 }
