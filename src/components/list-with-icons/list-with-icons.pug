@@ -1,0 +1,8 @@
+mixin listWithIcons(list)
+  ul(class='list-with-icons')
+    for item in list
+      li(class='list-with-icons__item')
+        i(class='material-icons list-with-icons__icon')=item.icon
+        div(class='list-with-icons__text')
+          h3=item.title
+          span=item.subtitle

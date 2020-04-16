@@ -1,0 +1,19 @@
+.list-with-icons__item {
+  border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+  padding: 20px 0;
+  box-sizing: border-box; }
+.list-with-icons__icon {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 41px;
+  text-align: center;
+  color: #BC9CFF;
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle; }
+.list-with-icons__text {
+  display: inline-block;
+  vertical-align: middle; }
+
+/*# sourceMappingURL=list-with-icons.css.map */
