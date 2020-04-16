@@ -1,0 +1,27 @@
+.expandable-list__title > h3 {
+  display: inline;
+  vertical-align: middle; }
+.expandable-list__checkbox-list {
+  display: none; }
+  .expandable-list__checkbox-list_opened {
+    display: block; }
+.expandable-list__button {
+  border: none;
+  display: inline-block;
+  background-color: transparent;
+  vertical-align: middle; }
+  .expandable-list__button:focus {
+    outline: none; }
+  .expandable-list__button > i:after {
+    content: 'expand_more';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    color: rgba(31, 32, 65, 0.5);
+    display: inline-block; }
+  .expandable-list__button_pressed > i {
+    transform: rotate(-180deg); }
+
+/*# sourceMappingURL=expandable-checkbox.css.map */

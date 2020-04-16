@@ -1,0 +1,8 @@
+mixin expCheckbox(optionsList, listName)
+  div(class='expandable-list')
+    span(class='expandable-list__title')
+      h3=listName
+      button(type='button' class='expandable-list__button')
+        i(class='material-icons')
+    include ../checkbox-buttons/checkbox-buttons
+    +checkboxButtons(optionsList)(class='expandable-list__checkbox-list')

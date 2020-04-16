@@ -1,0 +1,40 @@
+@import "../../theme/variables";
+
+.expandable-list {
+  &__title {
+    &>h3 {
+      display: inline;
+      vertical-align: middle;
+    }
+  }
+  &__checkbox-list {
+    display: none;
+    &_opened {
+      display: block;
+    }
+  }
+  &__button {
+    border: none;
+    display: inline-block;
+    background-color: $transparent;
+    vertical-align: middle;
+    &:focus {
+      outline: none;
+    }
+    &>i:after {
+      content: 'expand_more';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 24px;
+      text-align: center;
+      color: $darkShade50;
+      display: inline-block;
+    }
+    &_pressed {
+      &>i {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+}
