@@ -1,0 +1,8 @@
+mixin bulletList(list, listName)
+  if(listName)
+    h3=listName
+  ul(class='bullet-list')
+    for item in list
+      li(class='bullet-list__item')
+        div
+          p=item

@@ -1,0 +1,23 @@
+.bullet-list__item {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75); }
+  .bullet-list__item:before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(31, 32, 65, 0.25);
+    margin-right: 10px;
+    display: inline-block; }
+  .bullet-list__item > div {
+    display: inline-block;
+    max-width: 275px;
+    vertical-align: top; }
+    .bullet-list__item > div > p {
+      margin: 0;
+      padding: 0; }
+
+/*# sourceMappingURL=bullet-list.css.map */
