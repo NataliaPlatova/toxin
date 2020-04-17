@@ -18,7 +18,8 @@ block content
         +toggle('Send me email', 'myId')
 
         include ../../components/checkbox-buttons/checkbox-buttons
-        +checkboxButtons(['Можно курить', 'Можно с питомцами', 'Можно приглашать гостей'])
+        +checkboxButtons([{'name':'smoking', 'label':'Можно курить'}, {'name':'pets', 'label':'Можно с питомцами'},
+            {'name':'guests', 'label':'Можно приглашать гостей'}])
 
         include ../../components/like-button/like-button
         i(class="material-icons") face
@@ -45,7 +46,8 @@ block content
             {'title': 'Удобство', 'subtitle': 'Окно в каждой из спален', 'icon': 'location_city'}])
 
         include ../../components/expandable-checkbox/expandable-checkbox
-        +expCheckbox(['можно курить', 'можно есть', 'можно дышать'], 'expandable checkbox list')
+        +expCheckbox([{'name': 'smoking', 'label': 'Можно курить'}, {'name': 'pets', 'label': 'Можно с питомцами'},
+            {'name': 'guests', 'label': 'Можно приглашать гостей'}], 'expandable checkbox list')
 
         include ../../components/rich-checkbox/rich-checkbox
         +richCheckbox([{'name':'hall', 'title': 'Широкий коридор', 'paragraph': 'Ширина коридоров в номере не менее 91 см.'},
