@@ -50,4 +50,7 @@
     line-height: 15px;
     text-transform: uppercase; }
 
+.dropdown__selection {
+  display: none; }
+
 /*# sourceMappingURL=dropdown.css.map */
