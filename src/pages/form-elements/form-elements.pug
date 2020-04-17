@@ -1,6 +1,5 @@
 extends ../../layout/ui-kit/ui-kit.pug
 block variables
-    -var selectorOptions = ['option1', 'option2', 'option3'];
     -var pageLinks = ['mbvnb', 'ydddddd', 'uuuuuuuuuu', 'uuuuuussfsfs', 'gggggggggg', 'hhhhhhhhh', 'taagxhxgcx', 'gsfs'];
 
 block content
@@ -47,3 +46,7 @@ block content
 
         include ../../components/expandable-checkbox/expandable-checkbox
         +expCheckbox(['можно курить', 'можно есть', 'можно дышать'], 'expandable checkbox list')
+
+        include ../../components/rich-checkbox/rich-checkbox
+        +richCheckbox([{'name':'hall', 'title': 'Широкий коридор', 'paragraph': 'Ширина коридоров в номере не менее 91 см.'},
+            {'name':'disability-help', 'title': 'Помощьник для инвалидов', 'paragraph': 'На 1 этаже вас встретит специалист и проводит до номера.'}])

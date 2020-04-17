@@ -1,0 +1,9 @@
+mixin richCheckbox(optionList)
+  fieldset(class='rich-checkbox')&attributes(attributes)
+     for option in optionList
+        label
+          input(type='checkbox' name=option.name)
+          span(class='rich-checkbox__input')
+          div(class='rich-checkbox__description')
+            span(class='rich-checkbox__title')=option.title
+            span(class='rich-checkbox__paragraph')=option.paragraph

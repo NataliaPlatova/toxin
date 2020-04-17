@@ -2,6 +2,6 @@ mixin checkboxButtons(optionsList)
   fieldset(class='checkbox')&attributes(attributes)
     for option in optionsList
       label
-        input(type='checkbox' id='1' name=option)
+        input(type='checkbox' id='1' name=option.name)
         span(class='checkbox__input')
-        span(class='checkbox__label')=option
+        span(class='checkbox__label')=option.name
