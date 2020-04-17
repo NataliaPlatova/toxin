@@ -1,6 +1,7 @@
 .rich-checkbox {
   border: none; }
   .rich-checkbox > label {
+    margin-bottom: 10px;
     position: relative; }
     .rich-checkbox > label > [type='checkbox'] {
       opacity: 0;

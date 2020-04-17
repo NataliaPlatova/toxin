@@ -3,6 +3,7 @@
 .rich-checkbox {
   border: none;
   &>label {
+    margin-bottom: 10px;
     position: relative;
     &>[type='checkbox'] {
       opacity: 0;
