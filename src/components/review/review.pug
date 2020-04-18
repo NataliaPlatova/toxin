@@ -1,0 +1,11 @@
+mixin review(userReview)
+  div(class='review')
+    div(class='review__user')
+      div(class='review__user-photo')
+        //img(src=userReview.photoPath)
+      div(class='review__user-info')
+        span(class='review__user-name')=userReview.userName
+        span(class='review__date')=userReview.date
+    div(class='review__text-block')
+      include ../like-button/like-button
+      p=userReview.text
