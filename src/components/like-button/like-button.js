@@ -1,8 +1,9 @@
 import './like-button.scss';
 
-$('.like-button').on('click', function(e) {
-    const counter = e.target.lastElementChild;
-    let counterValue = Number(counter.innerHTML);
-    counter.innerHTML = String(counterValue+1);
+$('.like-button').on('click', function() {
+    let counter = $(this).children().last();
+    let counterValue = counter.val();
+    console.log(counterValue);
+    counter.html(String(counterValue+1));
 });
 
