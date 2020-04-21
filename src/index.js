@@ -1,4 +1,6 @@
 import * as $ from  'jquery/src/jquery';
+import Inputmask from "inputmask";
+
 import './theme/styles.scss';
 
 function requireAll(requireContext) {
