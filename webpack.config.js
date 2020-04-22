@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
@@ -46,7 +47,7 @@ module.exports = {
     context: path.resolve(__dirname, "src"),
     mode: "development",
     entry: {
-        main: "./index.js"
+        main: ['@babel/polyfill', './index.js']
     },
     output: {
         filename: 'js/' + filename('js'),
@@ -58,6 +59,10 @@ module.exports = {
         hot: isDev
     },
     plugins: [
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
+        }),
         new HTMLWebpackPlugin({
             template: './index.pug',
             minify: {
@@ -124,6 +129,21 @@ module.exports = {
             {
                 test: /\.pug$/,
                 use: ['pug-loader']
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: [{
+                    loader: 'babel-loader',
+                    options: {
+                        presets: [
+                            '@babel/preset-env'
+                        ],
+                        plugins: [
+                            '@babel/plugin-proposal-class-properties'
+                        ]
+                    }
+                }]
             }
         ]
     }

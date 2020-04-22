@@ -1,5 +1,5 @@
 import * as $ from  'jquery/src/jquery';
-import Inputmask from "inputmask";
+import './babel';
 
 import './theme/styles.scss';
 
