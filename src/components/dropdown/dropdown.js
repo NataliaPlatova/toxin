@@ -2,26 +2,22 @@ require('item-quantity-dropdown/lib/item-quantity-dropdown.min.js');
 import './dropdown.scss';
 
 $(document).ready(function() {
-    $(".dropdown").iqDropdown({
-        onChange: (id, count, totalItems) => {
-            if(totalItems===0) {
-                $('.dropdown__selection').css('display', 'none');
-                $('.dropdown__default-text').css('display', 'block');
-            } else {
-                $('.dropdown__selection').css('display', 'block');
-                $('.dropdown__default-text').css('display', 'none');
+    $(".dropdown").iqDropdown(
+        {
+            setSelectionText(itemCount, totalItems) {
+                if (totalItems === 0) {
+                    return "Сколько гостей";
+                } else if((totalItems%10>=5 || totalItems%10===0) || (totalItems%100<=20 && totalItems%100>=11)){
+                    return `${totalItems} гостей`;
+                }else if(totalItems%10===1) {
+                    return `${totalItems} гость`;
+                }else {
+                    return `${totalItems} гостя`;
+                }
+            },
+            onChange: (id, count, totalItems) => {
+                this.setSelectionText(count, totalItems);
             }
-            let a = totalItems%10;
-            if((a>=5 || a===0) || (totalItems%100<=20 && totalItems%100>=11)){
-                let selection = $('.dropdown__selection');
-                let selectionPluralText = selection.attr('data-text-plural-2');
-                selection.html(`${totalItems} ${selectionPluralText}`);
-            } else if(a===1) {
-                let selection = $('.dropdown__selection');
-                let selectionPluralText = selection.attr('data-text-plural-3');
-                selection.html(`${totalItems} ${selectionPluralText}`);
-            }
-        }
-    });
+        });
 });
 
