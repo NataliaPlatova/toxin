@@ -10,7 +10,10 @@ block content
 
         include ../../components/dropdown/dropdown
         +dropdown([{'id': 'adualts', 'item': 'Взрослые'}, {'id': 'children', 'item': 'Дети'},
-            {'id': 'babies', 'item': 'Младенцы'}], 'Сколько гостей')
+            {'id': 'babies', 'item': 'Младенцы'}], 'Сколько гостей', {'singleItem': 'гость', 'pluralItem': 'гостя', 'pluralItem2': 'гостей'})
+        include ../../components/dropdown/dropdown
+        +dropdown([{'id': 'beds', 'item': 'холодильник'}, {'id': 'bathrooms', 'item': 'ванные'},
+            {'id': 'fridges', 'item': 'холодильники'}], 'Сколько приблуд', {'singleItem': 'приблуда', 'pluralItem': 'приблуды', 'pluralItem2': 'приблуд'})
 
         include ../../components/radio-buttons/radio-buttons
         +radio-buttons(['item1', 'item2', 'item4'], 'Name')

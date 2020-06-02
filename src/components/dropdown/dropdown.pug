@@ -1,6 +1,6 @@
-mixin dropdown(optionsList)
+mixin dropdown(optionsList, placeholder, dataText)
     div(class="iqdropdown dropdown")
-        p(class="iqdropdown-selection dropdown__selection" data-selection-text="гость" data-text-plural="гостя" data-text-plural-2="гостей" data-text-plural-3="гость")
+        p(class="iqdropdown-selection dropdown__selection" data-placeholder=placeholder data-selection-text=dataText.singleItem data-text-plural=dataText.pluralItem data-text-plural-2=dataText.pluralItem2)
         div(class="iqdropdown-menu dropdown__menu")
             for option in optionsList
                 div(class="iqdropdown-menu-option dropdown__option" data-id=option.id)
