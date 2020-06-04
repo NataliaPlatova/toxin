@@ -12,8 +12,14 @@ block content
         +dropdown([{'id': 'adualts', 'item': 'Взрослые'}, {'id': 'children', 'item': 'Дети'},
             {'id': 'babies', 'item': 'Младенцы'}], 'Сколько гостей', {'singleItem': 'гость', 'pluralItem': 'гостя', 'pluralItem2': 'гостей'})
         include ../../components/dropdown/dropdown
-        +dropdown([{'id': 'beds', 'item': 'холодильник'}, {'id': 'bathrooms', 'item': 'ванные'},
+        +dropdown([{'id': 'beds', 'item': 'кровати'}, {'id': 'bathrooms', 'item': 'ванные'},
             {'id': 'fridges', 'item': 'холодильники'}], 'Сколько приблуд', {'singleItem': 'приблуда', 'pluralItem': 'приблуды', 'pluralItem2': 'приблуд'})
+
+        include ../../components/dropdown-item-count/dropdown-item-count
+        +dropdownItemCount([{'id': 'beds', 'item': 'кровати', 'single': 'кровать', 'plural1': 'кровати', 'plural2': 'кроватей'},
+            {'id': 'bathrooms', 'item': 'ванные', 'single': 'ванная', 'plural1': 'ванные', 'plural2': 'ванных'},
+            {'id': 'fridges', 'item': 'холодильники', 'single': 'холодильник', 'plural1': 'холодильника', 'plural2': 'холодильников'}],
+        'Че каво?')
 
         include ../../components/radio-buttons/radio-buttons
         +radio-buttons(['item1', 'item2', 'item4'], 'Name')

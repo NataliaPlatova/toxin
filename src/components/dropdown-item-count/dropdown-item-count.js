@@ -1,8 +1,8 @@
 require('item-quantity-dropdown/lib/item-quantity-dropdown.min.js');
-import './dropdown.scss';
+import './dropdown-item-count.scss';
 
 $(document).ready(function() {
-  const allPageDropdowns = $('.dropdown-total');
+  const allPageDropdowns = $('.dropdown-items-count');
   for (let i=0; i<allPageDropdowns.length; i++) {
     const dropdown = $(allPageDropdowns[i]);
     const dropdownSelection = $(dropdown.children()[0]);
@@ -11,12 +11,15 @@ $(document).ready(function() {
              setSelectionText: (itemCount, totalItems) => {
                if (totalItems === 0) {
                  return `${dropdownSelection.data('placeholder')}`;
-               } else if ((totalItems % 10 >= 5 || totalItems % 10 === 0) || (totalItems % 100 <= 20 && totalItems % 100 >= 11)) {
-                 return `${totalItems} ${dropdownSelection.data('text-plural-2')}`;
-               } else if (totalItems % 10 === 1) {
-                 return `${totalItems} ${dropdownSelection.data('selection-text')}`;
                } else {
-                 return `${totalItems} ${dropdownSelection.data('text-plural')}`;
+                   const allItems = Object.keys(itemCount);
+                   const dropdownMenu = $(dropdown.children()[1]);
+                   const allOptions = $(dropdownMenu.children());
+                    for (let x=0; x<allOptions.length; x++) {
+                        const option = $(allOptions[x]);
+                        const item = allItems[x];
+                        console.log(item);
+                    }
                }
              }
            }

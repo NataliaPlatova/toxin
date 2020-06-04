@@ -1,0 +1,53 @@
+@import url(~item-quantity-dropdown/lib/item-quantity-dropdown.min.css);
+.iqdropdown {
+  border: 1px solid rgba(31, 32, 65, 0.25); }
+  .iqdropdown.menu-open {
+    border-color: rgba(31, 32, 65, 0.05);
+    border-radius: 2px 2px 0 0; }
+  .iqdropdown .iqdropdown-selection {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75);
+    flex: 1;
+    position: relative; }
+  .iqdropdown .iqdropdown-menu {
+    box-shadow: none;
+    border: 1px solid rgba(31, 32, 65, 0.05);
+    border-radius: 0 0 2px 2px; }
+  .iqdropdown .iqdropdown-item-controls
+  button.button-decrement {
+    border-radius: 50%; }
+  .iqdropdown .iqdropdown-item-controls
+  button.button-increment {
+    border-radius: 50%; }
+  .iqdropdown .iqdropdown-item-controls
+  button {
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    width: 30px;
+    height: 30px;
+    padding: 0; }
+  .iqdropdown .iqdropdown-item-controls
+  .counter {
+    color: #1F2041;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    padding: 11px 20px; }
+  .iqdropdown-item {
+    color: #1F2041;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase; }
+
+/*# sourceMappingURL=dropdown-item-count.css.map */
