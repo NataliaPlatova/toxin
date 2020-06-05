@@ -24,6 +24,7 @@ $(document).ready(function() {
                    const allItems = Object.keys(itemCount);
                    const dropdownMenu = $(dropdown.children()[1]);
                    const allOptions = $(dropdownMenu.children());
+                   let finalInputText = '';
                     for (let x=0; x<allOptions.length; x++) {
                         const option = $(allOptions[x]);
                         const item = allItems[x];
@@ -31,6 +32,7 @@ $(document).ready(function() {
                             const itemAmount = itemCount[item];
                             const option = $(allOptions[x]);
                             let selectionText;
+                            let itemAmountText;
                             if ((itemAmount % 10 >= 5 || itemAmount % 10 === 0) || (itemAmount % 100 <= 20 && itemAmount % 100 >= 11)) {
                                 selectionText = option.data('text-plural-2');
                             } else if (itemAmount % 10 === 1) {
@@ -38,9 +40,16 @@ $(document).ready(function() {
                             } else {
                                 selectionText = option.data('text-plural');
                             }
-                            console.log(selectionText);
+                            itemAmountText = `${itemAmount} ${selectionText}`;
+                            console.log (itemAmountText);
+                            if (finalInputText === '') {
+                                finalInputText = `${itemAmountText}`;
+                            } else {
+                                finalInputText = `${finalInputText}, ${itemAmountText}`;
+                            }
                         }
                     }
+                    return finalInputText;
                }
              }
            }
