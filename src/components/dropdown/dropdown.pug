@@ -1,9 +1,12 @@
 mixin dropdown(optionsList, placeholder, dataText)
     div(class="iqdropdown dropdown dropdown-total")
-        p(class="iqdropdown-selection dropdown__selection" data-placeholder=placeholder data-selection-text=dataText.singleItem data-text-plural=dataText.pluralItem data-text-plural-2=dataText.pluralItem2)
-        div(class="iqdropdown-menu dropdown__menu")
-            for option in optionsList
-                div(class="iqdropdown-menu-option dropdown__option" data-id=option.id)
-                    div
-                        p(class="iqdropdown-item dropdown__item")=option.item
-
+      p(class="iqdropdown-selection dropdown__selection" data-placeholder=placeholder data-selection-text=dataText.singleItem data-text-plural=dataText.pluralItem data-text-plural-2=dataText.pluralItem2)
+      div(class="iqdropdown-menu dropdown__menu")
+        for option in optionsList
+          div(class="iqdropdown-menu-option dropdown__option" data-id=option.id)
+            div
+              p(class="iqdropdown-item dropdown__item")=option.item
+        div(class="dropdown__buttons")
+          include ../../components/button/button
+          +button('false', 'Очистить')(class='text-link')
+          +button('false', 'Применить')(class='text-link')

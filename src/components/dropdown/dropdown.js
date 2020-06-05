@@ -16,7 +16,7 @@ $(document).ready(function() {
                } else if (totalItems % 10 === 1) {
                  return `${totalItems} ${dropdownSelection.data('selection-text')}`;
                } else {
-                 return `${totalItems} ${dropdownSelection.data('text-plural')}`;
+                   return `${totalItems} ${dropdownSelection.data('text-plural')}`;
                }
              }
            }

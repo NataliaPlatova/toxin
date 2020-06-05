@@ -61,3 +61,13 @@
     text-transform: uppercase;
   }
 }
+
+.dropdown{
+  &__buttons {
+    display: flex;
+    padding: 12px 15px;
+    &>button:last-child {
+      margin-left: auto;
+    }
+  }
+}
